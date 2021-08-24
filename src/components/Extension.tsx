@@ -8,6 +8,12 @@ const StyledExtension = styled.div`
     display: flex;
     flex-direction: column;
     position: relative;
+    &:not(:first-child) {
+        margin-top: 2rem;
+        @media screen and (min-width: 864px) {
+            margin-top: 0;
+        }
+    }
     @media screen and (min-width: 864px) {
         margin: 0 1rem;
         &:first-child {
