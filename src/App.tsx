@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { AnimateSharedLayout } from "framer-motion";
+import GlobalStyles from "./styles/globalStyles";
+import Nav from "./components/Nav";
+import ScrollContainer from "./components/ScrollContainer";
+import Hero from "./components/Hero";
+import Features from "./components/Features";
+import Extensions from "./components/Extensions";
+import Faqs from "./components/Faqs";
+import Cta from "./components/Cta";
+import Footer from "./components/Footer";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    return (
+        <>
+            <AnimateSharedLayout type="crossfade">
+                <GlobalStyles />
+                <Nav />
+                <ScrollContainer>
+                    <Hero />
+                    <Features />
+                    <Extensions />
+                    <Faqs />
+                    <Cta />
+                    <Footer />
+                </ScrollContainer>
+            </AnimateSharedLayout>
+        </>
+    );
+};
 
 export default App;
